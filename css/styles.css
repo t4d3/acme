@@ -1,0 +1,353 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 24, 2017, 11:53:45 AM
+    Author     : T4d3
+*/
+
+body {
+    padding: 0;
+    margin: 3%;
+    font-family: "Comic Sans MS";
+    background-image: url("/acme/images/site/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    width: 100%;
+}
+
+#reviews h4, h5{
+    margin: 0;
+}
+
+#reviews section{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+#reviews article {
+    margin-left: 2em;
+}
+#reviews li {
+    display: flex;
+    flex-direction: column;
+    min-height: 4em;
+    padding: 5px;
+    ;
+}
+#reviews{
+    border: 1px solid #808080;
+    width: 100%;
+}
+#clientReviews {
+    border: 1px solid #808080;
+    width: 100%;
+
+}
+
+#clientReviews h4 {
+    margin: 0;
+}
+#clientReviews td {
+    padding: .5em;
+}
+
+#clientReviews tr:nth-child(odd) {
+    background-color: #dddddd;
+
+}
+#reviews li:nth-child(odd) {
+    background-color: #dddddd;
+}
+
+#amceWebsite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+
+    width: 100%;
+}
+
+#productThumbnails li {
+    padding: 0;
+    max-width: 20em;
+}
+
+#productThumbnails{
+    display: flex;
+    align-items: flex-start;
+    flex-flow: wrap;
+    flex-direction: row;
+}
+
+#myAccount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+
+    width: 100%;
+}
+
+input[type=text], input[type=email], input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS";
+}
+
+button {
+    background-color: #DE2226;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-family: "Comic Sans MS";
+    font-size: 1.3em;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav {
+    background-color: #DE2226;
+    padding: 5px;
+}
+
+nav ul {
+    background-color: #DE2226;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: block; 
+}
+
+nav > ul > li {
+    display:table; 
+    border-left: 15px solid #DE2226;
+}
+
+header {
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;    
+}
+
+#topText {
+    color: #990033;
+}
+
+#top{
+    align-items: flex-end;
+    background: url('/acme/images/site/rocketfeature.jpg');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid blue;
+}
+
+#buyNow {
+    width: 50%;
+}
+
+#prod-displayMain {
+    padding: 1em;
+}
+
+#bottom {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+main {
+    background: #ffffff;
+}
+
+footer {
+    background: #ffffff;
+    color:#990033;
+    clear:both;
+    text-align:center;
+    padding:5px;
+
+}
+
+#foodPic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#item-display{
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#item-display ul{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#item-display li{
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+#item-display img{
+    width: 100%;
+}
+
+#prodPrice{
+    color: red;
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS";
+}
+
+
+@media screen and (min-width: 30.1em) {
+
+    #myAccount {
+        flex-direction: row;
+        justify-content: center;
+        width: 50%;
+    }
+
+    #top{
+        opacity: 1;
+
+    }   
+
+    #reviews section {
+        width: 75%;
+    }
+
+
+    nav > ul > li {
+        display: table-cell; 
+    }
+    figure {
+        border: 0;
+        padding: 0;
+        margin: 1em;
+        width: 5em;
+    }
+
+    main {
+        padding: 1em;
+    }
+
+    #foodPic {
+        border: 10px;
+    }
+
+    #top{
+        background-size: 100% 100%;
+    }
+    #prod-display{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #prod-display{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    #prod-display li{
+        margin-bottom: .5em;
+        list-style-type: none;
+        flex: 1 1 auto;
+    }
+    #prod-display li img{
+        width: 100%;
+        height: 200px;
+    }
+
+    #item-display img{
+        max-width: 50%;
+        padding-right:1em;
+    }
+
+    #item-display ul{
+
+    }
+
+    #productDetail{
+        display: flex;
+        max-width: 100%;
+        align-items: flex-start;
+        /*        flex-direction: row;
+                flex-wrap: wrap;
+                width:49%;*/
+    }
+}
+
+@media screen and (min-width: 50em) {
+    body {
+        margin: 0px auto;
+        max-width: 40em;
+    }
+
+    #foodAd {
+        width: 50%;
+    }
+
+
+    #foodPic {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 50%;
+    }
+    #prod-display{
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+    #prod-display li{
+        max-width: 200px;
+        flex: 1 0 auto;
+        text-align: center;
+        max-height: 400px; }
+
+}
+

@@ -1,0 +1,62 @@
+DROP TABLE clients;
+CREATE or REPLACE TABLE clients
+  ( client_id   int         NOT NULL AUTO_INCREMENT
+  , last_name   varchar(25)
+  , first_name  varchar(25) NOT NULL
+  , email       varchar(40)      
+  , password    varchar(255)
+  , description varchar(255) 
+  , PRIMARY KEY (client_ID) );
+
+INSERT INTO clients
+(first_name, last_name, email, password, description)
+VALUES ( 'Tony'
+       , 'Stark'
+       , 'tony@starkent.com'
+       , 'Iam1ronM@n'
+       , 'I am the real Ironman' );
+
+ALTER TABLE clients
+ADD clientLevel int;
+
+UPDATE clients
+SET clientLevel = 3
+WHERE first_name = 'Tony';
+
+/*************************
+*** Testing the UPDATE ***
+
+INSERT INTO `inventory` (`invId`, `invName`, `invDescription`, `invImage`, `invThumbnail`, `invPrice`, `invStock`, `invSize`, `invWeight`, `invLocation`, `categoryId`, `invVendor`, `invStyle`) VALUES
+(17, 'Test Item', 'This is a Test Item.  okay', '/acme/images/products/rocket.png', '/acme/images/products/rocket-tn.png', '132000.00', 5, 60, 90, 'Albuquerque, New Mexico', 4, 'asdf', 'test');
+
+UPDATE inventory
+SET    invName        = replace(invName, 'Test', 'Quiz')
+     , invDescription = replace(invDescription, 'Test', 'Quiz')
+WHERE  invName LIKE 'test%';
+
+SELECT * FROM inventory WHERE invId = 17;
+
+DELETE FROM inventory
+WHERE invVendor LIKE 'asdf';
+
+*** Testing the UPDATE ***
+**************************/
+
+UPDATE inventory
+SET    invName        = replace(invName, 'Nylon', 'Climbing')
+     , invDescription = replace(invDescription, 'nylon', 'climbing')
+     , invStyle       = replace(invDescription, 'Nylon', 'Climbing')
+WHERE  invName LIKE 'Nylon%';
+
+SELECT * FROM inventory WHERE invId = 15;
+
+SELECT invName
+FROM inventory AS i
+INNER JOIN categories AS c ON i.categoryId = c.categoryId
+WHERE c.categoryName LIKE 'Misc';
+
+DELETE FROM inventory
+WHERE invName LIKE 'Koenigsegg CCX Car';
+
+INSERT INTO `inventory` (`invId`, `invName`, `invDescription`, `invImage`, `invThumbnail`, `invPrice`, `invStock`, `invSize`, `invWeight`, `invLocation`, `categoryId`, `invVendor`, `invStyle`) VALUES
+(7, 'Koenigsegg CCX Car', 'This high performance car is sure to get you where you are going fast. It holds the production car land speed record at an amazing 250mph.', '/acme/images/products/no-image.png', '/acme/images/products/no-image.png', '99999999.99', 1, 25000, 3000, 'Stockholm, Sweden', 3, 'Koenigsegg', 'Metal');
