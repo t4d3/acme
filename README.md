@@ -19,7 +19,7 @@ Add the acme database into mySQL, add the user, and import the tables
 >
 > exit
 >
-> mysql -u root -p acme < /var/www/acme/sql/acmeFINAL.sql
+> mysql -u root -p acme < /var/www/html/acme/sql/acmeFINAL.sql
 
 If apache and mysql is running, you should be good to go!
 
