@@ -6,7 +6,7 @@ Get it up and running in linux in no time!
 Required packages: \
 > sudo apt-get install __apache2 php5 php5-mysql mysql-server__
 
-clone it into /var/www/html/ \
+clone it into /var/www/html/
 > git clone https://github.com/t4d3/acme /var/www/html/acme
 
 Add the acme database into mySQL, add the user, and import the tables \
